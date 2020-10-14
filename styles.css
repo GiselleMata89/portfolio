@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background: rgb(255, 255, 255);
+    color: #000;
+}
+
+.container{
+    width: 98%;
+    height: 100%;
+    padding: 0.5rem;
+    background: linear-gradient(70deg,rgb(236, 129, 192), rgb(255, 255, 255));
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 3rem repeat(11, 1fr);
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas:    
+    "h  c   c   c   c   c   c   c   s   s   s   s"
+    "h  c   c   c   c   c   c   c   s   s   s   s"
+    "h  c   c   c   c   c   c   c   s   s   s   s"
+    "h  c   c   c   c   c   c   c   s   s   s   s"
+    "h  p1  p1  p1  p1  p1  p1  p1  p2  p2  p2  p2"
+    "h  p1  p1  p1  p1  p1  p1  p1  p2  p2  p2  p2"
+    "h  p1  p1  p1  p1  p1  p1  p1  p2  p2  p2  p2"
+    "h  w1  w1  w1  w1  w1  w1  w1  w1  w1  w1  w1"
+    "h  w1  w1  w1  w1  w1  w1  w1  w1  w1  w1  w1"
+    "h  w1  w1  w1  w1  w1  w1  w1  w1  w1  w1  w1"
+    "h  f   f   f   f   f   f   f   f   f   f   f"
+    "h  f   f   f   f   f   f   f   f   f   f   f";
+}
+
+.container > div,
+.container .header,
+.container .footer{
+    padding: 1%;
+    border-radius: 5px;
+    display: block;
+}
+
+.container .content,
+.container .project_bs,
+.container .project_description,
+.container .habilidades,
+.container .section_photo{
+    padding: 1%;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Estilos del Header */
+.container .header{
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    background: rgb(169, 248, 89);
+    color: black;
+    grid-area: h;
+}
+
+/* Estilos del Content */
+.container .content{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: c;
+}
+
+/* Estilos Foto */
+.section_photo{
+    display: flex;
+    align-content: center;
+    grid-area: s;
+}
+
+/* Estilos de Projects */
+.container .project_bs{
+    grid-area: p1;
+}
+.container .habilidades{
+    grid-area: p2;
+}
+
+/* Estilos de Widgets */
+.container .w-1{
+    grid-area: w1;
+}
+
+/* Estilos del Footer */
+.container .footer{
+    padding: 1rem;
+    background: linear-gradient(130deg, rgb(169, 248, 89),rgb(49, 230, 236));
+    grid-area: f;
+}
+
+
+
